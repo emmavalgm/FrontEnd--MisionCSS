@@ -1,0 +1,631 @@
+<!-- GMMEV -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vaccination</title>
+    <link rel="stylesheet" href="./Vaccination.css">
+ 
+   <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        header {
+            background-color: rgb(245, 239, 239);
+            padding: 30px;
+            text-align: center;
+            font-size: 35px;
+            color: rgb(77, 19, 184);
+        }
+
+        nav {
+            float: left;
+            width: 40%;
+            height: 600px;
+
+            background: whitesmoke;
+            padding: 20px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .centrado {
+		    margin:10px auto;
+		    display:block;
+        }
+
+        article {
+            float: right;
+            padding: 20px;
+            width: 60%;
+            background-color: #c78888;
+            height: 600px;
+        }
+
+        .navu2 {
+            background-color: beige;
+        }
+
+        .caja1 {
+            background-color: #e49a9a;
+            width: 370px;
+            height: 350px;
+            float: left;
+        }
+
+        .caja2 {
+            background-color: #e67575;
+            width: 370px;
+            height: 350px;
+            float: left;
+        }
+
+        .caja3 {
+            background-color: #e49a9a;
+            width: 370px;
+            height: 350px;
+            float: left;
+        }
+
+        .caja4 {
+            background-color: #e67575;
+            width: 370px;
+            height: 350px;
+            float: left;
+        }
+
+        .lado1 {
+            float: left;
+            padding: 20px;
+            width: 40%;
+            background-color: pink;
+            height: 1150px;
+        }
+
+        .lado2 {
+            float: right;
+            width: 60%;
+            height: 1150px;
+            background: pink;
+            padding: 20px;
+        }
+
+        .lado2 u5 {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .re1 {
+            background-color: #e49a9a;
+            width: 470px;
+            height: 150px;
+            float: center;
+        }
+
+        .re2 {
+            background-color: #e67575;
+            width: 470px;
+            height: 250px;
+            float: center;
+        }
+
+        .re3 {
+            background-color: #e49a9a;
+            width: 470px;
+            height: 150px;
+            float: center;
+        }
+
+        .re4 {
+            background-color: #e67575;
+            width: 470px;
+            height: 150px;
+            float: center;
+        }
+
+        .re5 {
+            background-color: #e67575;
+            width: 470px;
+            height: 150px;
+            float: center;
+        }
+
+        .lado5 {
+            float: left;
+            width: 40%;
+            height: 900px;
+
+            background: #b37d7d;
+            padding: 20px;
+        }
+
+        .lado5 u11 {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .centrado {
+		    margin:10px auto;
+		    display:block;
+        }
+
+        .article22 {
+            float: right;
+            padding: 20px;
+            width: 60%;
+            background-color: #c78888;
+            height: 900px;
+        }
+
+        section::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+        .footer {
+  display: flex;
+  flex-flow: row wrap;
+  padding: 30px 30px 20px 30px;
+  color: #2f2f2f;
+  background-color: rgb(235, 189, 189);
+  border-top: 1px solid #b18484;
+}
+
+.footer > * {
+  flex:  1 100%;
+}
+
+.footer__addr {
+  margin-right: 1.25em;
+  margin-bottom: 2em;
+}
+
+.footer__logo {
+  font-family: 'Pacifico', cursive;
+  font-weight: 400;
+  text-transform: lowercase;
+  font-size: 1.5rem;
+}
+
+.footer__addr h2 {
+  margin-top: 1.3em;
+  font-size: 15px;
+  font-weight: 400;
+}
+
+.nav__title {
+  font-weight: 400;
+  font-size: 15px;
+}
+
+.footer address {
+  font-style: normal;
+  color: #999;
+}
+
+.footer__btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 36px;
+  max-width: max-content;
+  background-color: rgb(33, 33, 33, 0.07);
+  border-radius: 100px;
+  color: #2f2f2f;
+  line-height: 0;
+  margin: 0.6em 0;
+  font-size: 1rem;
+  padding: 0 1.3em;
+}
+
+.footer ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.footer li {
+  line-height: 2em;
+}
+
+.footer a {
+  text-decoration: none;
+}
+
+.footer__nav {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.footer__nav > * {
+  flex: 1 50%;
+  margin-right: 1.25em;
+}
+
+.nav__ul a {
+  color: #999;
+}
+
+.nav__ul--extra {
+  column-count: 2;
+  column-gap: 1.25em;
+}
+
+.legal {
+  display: flex;
+  flex-wrap: wrap;
+  color: rgb(26, 24, 24);
+}
+  
+.legal__links {
+  display: flex;
+  align-items: center;
+}
+
+
+@media screen and (min-width: 24.375em) {
+  .legal .legal__links {
+    margin-left: auto;
+  }
+}
+
+@media screen and (min-width: 40.375em) {
+  .footer__nav > * {
+    flex: 1;
+  }
+  
+  .nav__item--extra {
+    flex-grow: 2;
+  }
+  
+  .footer__addr {
+    flex: 1 0px;
+  }
+  
+  .footer__nav {
+    flex: 2 0px;
+  }
+}
+
+        @media (max-width: 600px) {
+
+            nav,
+            article,
+            .side11,
+            .article22{
+                width: 100%;
+                height: auto;
+            }
+        }
+
+    </style>
+
+</head>
+
+<body style="background-color: pink">
+
+    <header>
+    
+        <h2>
+        <div border-top-right: blue></div>
+        <div align="left">Vaccination</div>
+        
+        <button type="submit" class="linea" style="background-color:rgb(245, 239, 239); width:120px; height:50px">Database</button>
+        <button type="submit" class="linea" style="background-color:rgb(245, 239, 239); width:120px; height:50px">Education</button>
+        <button type="submit" class="linea" style="background-color:rgb(245, 239, 239); width:120px; height:50px">News</button>
+        <button type="submit" class="linea" style="background-color:rgb(245, 239, 239); width:120px; height:50px">Regulation</button>
+        <button type="submit" class="linea" style="background-color:blueviolet; border-color:pink; border-color:rgb(12, 44, 44); color:white; width:170px; height:75px">Hoax Buster</button>
+        </div>
+        </h2>
+
+    </header>
+
+        <section>
+            <nav>
+                <ul>
+                    <div class="nav">
+                    <h2 style="color: fuchsia; text-align:center">Fight Virus <br> With Vaccines<br><br></h2>
+                    <div font face="Paris"; style="color:rgb(12, 44, 44); text-align:center">
+                    <p>Let's stop this pandemic by killing the virus <br> with a vaccines, don't let yourself and your <br> family get infected.<br><br><br></p>
+                    </div>
+                    <table>
+                        <tbody>
+                        <tr>
+                        <td>
+                            <p>
+                                <img class="centrado" src="proteccion.jpg" alt="Proteccion" width="100px" height="100px">
+                                <h1 style="color:#c78888; text-align: middle">Best Proteccion</h1>
+                            </p>
+                        </td>
+                        <td>
+                        </td>
+                        <td>
+                            <p>
+                                <img class="centrado" src="estrella.jpg" alt="Estrella" width="100px" height="100px">
+                                <h1 style="color:#c78888; text-align: middle">Selected Vaccines</h1>
+                            </p>
+                        </td>
+                        <td>
+                        </td>
+                        </div>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <br><br><br>
+                    <p> 
+                        <img src="reloj.jpg" alt="Reloj" align="left" width="75px" height="75px">
+                        <h3 style="color:rgb(49, 45, 40); text-align:middle">Schedule your vaccinations</h3>
+                    </p>
+                    <br><br><br>
+                </ul>
+            </nav>
+        
+
+            <article>
+                <div align="center"><img src="inyeccion.jpg" alt="Inyeccion" width="600px" height="550px" ></div>
+            </article>
+            <br><br><br>
+
+            <navu2>
+                <br><br>
+                <p style="background:#4e0622; color:white; font-weight:bold; padding:80px; border:10px solid #2b0f1e; margin-top:50px; margin-bottom:50px; text-align:center; font-size:22px; border-radius:10px;">
+                    Our services
+                </p>
+            </navu2>
+
+    <table>
+        <tr>
+            <th>
+                <img src="location.jpg" alt="Location" width="150px" height="150px">
+            </th>
+            <th>
+                <img src="date.jpg" alt="Date" width="150px" height="150px">
+            </th>
+            <th>
+                <img src="iny.jpg" alt="Vaccine Type" width="150px" height="150px">
+            </th>
+        </tr>
+        <tr>
+            <td><h4>Location</h4></td>
+            <td><h4>Date</h4></td>
+            <td><h4>Vaccine Type</h4></td> 
+            <td><button type="submit" class="linea" style="background-color:blueviolet; border-color:pink; border-color:rgb(12, 44, 44); color:white; width:170px; height:75px">Submit</button></td>
+        </tr>
+        <tr>
+            <td>Jakarta Utara</td>
+            <td>08 July 2021</td>
+            <td>Moderna</td>
+        </tr>
+    </table>
+    <br>
+
+    <img src="vaccines.jpg" alt="Vacc" width="1550px" height="200px">
+    <br>
+
+    <p>
+        <h2 style="color:#272222; text-align: middle">Why should I vaccine?</h2>
+    </p>
+    <p>
+        <h4 style="color:#777">In order to avoid any doubts about getting the COVID-19 <br>
+        vaccine, identify the folloging 4 benefits of COVID-19<br>
+        vaccination:</h4>
+    </p>
+
+    <div class="caja1">
+        <img class="centrado" src="gel.jpg" alt="Gel" width="100px" height="100px">
+        <h2 style="color:#3f787c; text-align: center;">Minimize the <br>
+        spread of viruses <br></h2>
+        <p style="text-align:center">Vaccine has been proven <br>
+        effective to prevent someone<br>
+        from getting infected with <br>
+        Coronavirus.</p>
+    </div>
+
+    <div class="caja2">
+        <img class="centrado" src="anticuerpos.jpg" alt="Anticuerpos" width="100px" height="100px">
+        <h2 style="color:#3f787c; text-align: center;">Forming<br>
+        antibodies <br></h2>
+        <p style="text-align:center">COVID-19 vaccine proven to<br>
+        help shape antibody<br>
+        response for inmune system. <br>
+        </p>
+    </div>
+
+    <div class="caja3">
+        <img class="centrado" src="fam.jpg" alt="Familia" width="100px" height="100px">
+        <h2 style="color:#3f787c; text-align: center;">Protecting <br>
+        people nearby <br></h2>
+        <p style="text-align:center">The benefits of COVID-19<br>
+        vaccination are the vaccine<br>
+        that we get can also help <br>
+        protect people around us.</p>
+    </div>
+
+    <div class="caja4">
+        <img class="centrado" src="inmunity.jpg" alt="Inmunity" width="100px" height="100px">
+        <h2 style="color:#3f787c; text-align: center;">Creating group<br>
+        inmunity <br></h2>
+        <p style="text-align:center">COVID-19 vaccination is also<br>
+        beneficial for creating group<br>
+        inmunity or herd inmunity. <br></p>
+    </div>
+
+
+    <lado1>
+        <div class="lado1" align="left"><img src="pic1.jpg" alt="Personas" width="550px" height="1000px" ></div>
+    </lado1>
+
+    <section>
+        <lado2>
+            <u5>
+                <div class="lado2">
+                <h2 style="color: rgb(39, 21, 39); text-align:center">Preparations Before Vaccine</h2>
+                <div font face="Paris"; style="color:rgb(12, 44, 44); text-align:center">
+                <p><h3>The success of vaccines is strongly influenced by the<br> 
+                strength of the body's inmune system. Therefore, there are<br> 
+                several things that can be tried to make the COVID-19<br>
+                vaccine work:<br><br></h3> </p>
+                </div>
+
+                <div class="re1">
+                    <img class="centrado" src="avoid.jpg" alt="Avoid" width="100px" height="100px">
+                    <h2 style="color:#3f787c; text-align: center;">Avoid alcoholic beverages</h2>
+                </div>
+            
+                <div class="re2">
+                    <img class="centrado" src="estres.jpg" alt="Avoid stress" width="100px" height="100px">
+                    <h2 style="color:#3f787c; text-align: center;">Avoid stress</h2>
+                    <p style="text-align:center">Stress has a profund effect on immune work.<br>
+                    Moreover, prolonged stress can increase cortisol<br>
+                    production and oxidative stress in the body.<br>
+                    </p>
+                </div>
+            
+                <div class="re3">
+                    <img class="centrado" src="EAT_HEALTHY_FOOD.jpg" alt="Food" width="100px" height="100px">
+                    <h2 style="color:#3f787c; text-align: center;">Eat healthy food</h2>
+                </div>
+            
+                <div class="re4">
+                    <img class="centrado" src="sleep.jpg" alt="Sleep" width="100px" height="100px">
+                    <h2 style="color:#3f787c; text-align: center;">Get enough sleep</h2>
+                </div>
+
+                <div class="re5">
+                    <img class="centrado" src="exercise.jpg" alt="Exercise" width="100px" height="100px">
+                    <h2 style="color:#3f787c; text-align: center;">Exercise or physical activity</h2>
+                </div>
+            </u5>
+        </lado2>
+    </section>
+<br><br><br>
+
+    <section>
+        <lado5>
+            <u11>
+                <h2 style="color: rgb(75, 77, 196); text-align:center">Emergency Contact</h2>
+                <div font face="Paris"; style="color:rgb(12, 44, 44); text-align:center">
+                <p>Contact one of the contacts below if you or your family feel <br>
+                unwell and have similar symptoms such as Covid-19, make <br> 
+                sure you also take care of yourself before reporting to us: <br><br><br></p>
+                </div>
+                <p> 
+                    <img src="calling.jpg" alt="Calling" align="left" width="75px" height="75px">
+                    <h3 style="color:rgb(49, 45, 40); text-align:middle">Call<br><br>
+                    021.123.145.14</h3>
+                    <button type="submit" class="linea" style="background-color:rgb(245, 239, 239); width:120px; height:50px">Call Now</button>
+                </p>
+                <p> 
+                    <img src="chat,jpg.png" alt="Chat" align="left" width="75px" height="75px">
+                    <h3 style="color:rgb(49, 45, 40); text-align:middle">Chat<br><br>
+                    021.123.145.14</h3>
+                    <button type="submit" class="linea" style="background-color:blueviolet; border-color:pink; border-color:rgb(12, 44, 44); color:white; width:170px; height:75px">Chat Now</button>
+                </p>
+                <p> 
+                    <img src="videocall.jpg" alt="Video Call" align="left" width="75px" height="75px">
+                    <h3 style="color:rgb(49, 45, 40); text-align:middle">Video Call<br><br>
+                    021.123.145.14</h3>
+                    <button type="submit" class="linea" style="background-color:rgb(245, 239, 239); width:120px; height:50px">Video Call Now</button>
+                </p>
+                <p> 
+                    <img src="message.jpg" alt="message" align="left" width="75px" height="75px">
+                    <h3 style="color:rgb(49, 45, 40); text-align:middle">Video Call<br><br>
+                    021.123.145.14</h3>
+                    <button type="submit" class="linea" style="background-color:rgb(245, 239, 239); width:120px; height:50px">Message Now</button>
+                </p> 
+            </u11>
+        </lado5>
+
+    <article22>
+        <div align="center"><img src="call.jpg" alt="Call" width="900px" height="550px" ></div>  
+    </article22>
+
+    <footer class="footer">
+        <div class="footer__addr">
+          <h1 class="footer__logo">Vaccination</h1>
+          <p>Our goal is to help the<br>
+            world free from the <br>
+            ongoing pandemic</p>
+
+          
+
+        </div>
+        
+        <ul class="footer__nav">
+          <li class="nav__item">
+            <h2 class="nav__title">About</h2>
+      
+            <ul class="nav__ul">
+              <li>
+                <a href="#">About us</a>
+              </li>
+      
+              <li>
+                <a href="#">Features</a>
+              </li>
+                  
+              <li>
+                <a href="#">News & Blog</a>
+              </li>
+            </ul>
+          </li>
+          
+          <li class="nav__item nav__item--extra">
+            <h2 class="nav__title">Company</h2>
+            
+            <ul class="nav__ul nav__ul--extra">
+              <li>
+                <a href="#">How We Work?</a>
+              </li>
+              
+              <li>
+                <a href="#">Capital</a>
+              </li>
+              
+              <li>
+                <a href="#">Security</a>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li class="nav__item">
+            <h2 class="nav__title">Support</h2>
+            
+            <ul class="nav__ul">
+              <li>
+                <a href="#">FAQs</a>
+              </li>
+              
+              <li>
+                <a href="#">Support Center</a>
+              </li>
+              
+              <li>
+                <a href="#">Contact Us</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+        
+        <div class="legal">
+          <p>&copy; @2021 Vaccination. All rights reserved.</p>
+          
+          <div class="legal__links">
+            <span>Terms & Agreements </span><span>Privacy Policy</span>
+          </div>
+        </div>
+      </footer>
+
+</body>
+
+</html>
